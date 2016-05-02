@@ -29,3 +29,9 @@ figcaption {
 .image {
 	max-width: 100%;
 }
+
+.hidden {
+	left: -2000em;
+	position: absolute;
+	top: -2000em;
+}

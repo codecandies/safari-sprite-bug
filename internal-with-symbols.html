@@ -1,0 +1,59 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Testcase: local svg sprite sheet with symbols</title>
+	<link rel="stylesheet" href="test.css">
+</head>
+<body>
+	<div class="hidden">
+		<svg xmlns="http://www.w3.org/2000/svg">
+		    <symbol viewBox="0 0 15 30" id="svg-arrow-articlelineage-left">
+		        <title>Voriger Artikel</title>
+		        <path stroke="#444" d="M14 0L1 15l13 15" />
+		    </symbol>
+		    <symbol viewBox="0 0 15 30" id="svg-arrow-articlelineage-right">
+		        <title>N&#xE4;chster Artikel</title>
+		        <path stroke="#444" d="M1 0l13 15L1 30" />
+		    </symbol>
+		    <symbol viewBox="0 0 8 6" id="svg-arrow-down">
+		        <title>&#xD6;ffnen</title>
+		        <path d="M1.5 0L0 1.5l4 4 4-4L6.5 0 4 2.5 1.5 0z" />
+		    </symbol>
+		    <symbol viewBox="0 0 9 20" id="svg-arrow-gallery-left">
+		        <title>Ein Bild zur&#xFC;ck</title>
+		        <path d="M6.764 20L0 9.82 6.71 0l2.234.977-5.27 8.69L9 18.92 6.764 20z" />
+		    </symbol>
+		    <symbol viewBox="0 0 9 20" id="svg-arrow-gallery-right">
+		        <title>Ein Bild vor</title>
+		        <path d="M0 18.92l5.326-9.253L.056.977 2.29 0 9 9.82 2.236 20 0 18.92z" />
+		    </symbol>
+		</svg>
+
+	</div>
+	<div class="wrapper">
+		<h1>Testcase: local svg sprite sheet with symbols</h1>
+		<h2>Some svg icons:</h2>
+		<div class="icons">
+			<svg class="svg-symbol" role="img">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-arrow-articlelineage-left"></use>
+			</svg>
+			<svg class="svg-symbol" role="img">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-arrow-articlelineage-right"></use>
+			</svg>
+			<svg class="svg-symbol" role="img">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-arrow-down"></use>
+			</svg>
+			<svg class="svg-symbol" role="img">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-arrow-gallery-left"></use>
+			</svg>
+			<svg class="svg-symbol" role="img">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-arrow-gallery-right"></use>
+			</svg>
+		</div>
+		<hr>
+		<h1>What' this?</h1>
+		<p>We found a bug in both mobile and desktop safari, versions higher than 9. <a href="http://codecandies.github.io/safari-sprite-bug/external-with-symbols.html">You'll find a testcase demonstrating the bug here</a>.</p>
+		<p>This testcase is the counterevidence, showing that the bug is not present, if the svgs are used from code in the page (instead of linking an external file).</p>
+		
+</body>
+</html>
