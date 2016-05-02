@@ -15,3 +15,17 @@ body {
 	padding: 20px;
 	width: 50px;
 }
+
+figure {
+	margin: 0;
+	padding: 0 0 40px 0;
+}
+
+figcaption {
+	margin: 5px 0 0 0;
+	font-size: 12px;
+}
+
+.image {
+	max-width: 100%;
+}
