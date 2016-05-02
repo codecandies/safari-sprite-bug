@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <symbol viewBox="0 0 15 30" id="svg-arrow-articlelineage-left">
+        <title>Voriger Artikel</title>
+        <path stroke="#444" d="M14 0L1 15l13 15" />
+    </symbol>
+    <symbol viewBox="0 0 15 30" id="svg-arrow-articlelineage-right">
+        <title>N&#xE4;chster Artikel</title>
+        <path stroke="#444" d="M1 0l13 15L1 30" />
+    </symbol>
+    <symbol viewBox="0 0 8 6" id="svg-arrow-down">
+        <title>&#xD6;ffnen</title>
+        <path d="M1.5 0L0 1.5l4 4 4-4L6.5 0 4 2.5 1.5 0z" />
+    </symbol>
+    <symbol viewBox="0 0 9 20" id="svg-arrow-gallery-left">
+        <title>Ein Bild zur&#xFC;ck</title>
+        <path d="M6.764 20L0 9.82 6.71 0l2.234.977-5.27 8.69L9 18.92 6.764 20z" />
+    </symbol>
+    <symbol viewBox="0 0 9 20" id="svg-arrow-gallery-right">
+        <title>Ein Bild vor</title>
+        <path d="M0 18.92l5.326-9.253L.056.977 2.29 0 9 9.82 2.236 20 0 18.92z" />
+    </symbol>
+</svg>

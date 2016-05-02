@@ -1,0 +1,48 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Testcase: external svg sprite sheet with symbols</title>
+	<link rel="stylesheet" href="test.css">
+</head>
+<body>
+	<div class="wrapper">
+		<h1>Testcase: External SVG sprite sheet with symbols</h1>
+		<h2>Some svg icons:</h2>
+		<div class="icons">
+			<svg class="svg-symbol" role="img">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="icons_smybols.svg#svg-arrow-articlelineage-left"></use>
+			</svg>
+			<svg class="svg-symbol" role="img">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="icons_smybols.svg#svg-arrow-articlelineage-right"></use>
+			</svg>
+			<svg class="svg-symbol" role="img">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="icons_smybols.svg#svg-arrow-down"></use>
+			</svg>
+			<svg class="svg-symbol" role="img">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="icons_smybols.svg#svg-arrow-gallery-left"></use>
+			</svg>
+			<svg class="svg-symbol" role="img">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="icons_smybols.svg#svg-arrow-gallery-right"></use>
+			</svg>
+		</div>
+		<hr>
+		<h1>What' this?</h1>
+		<p>We found a bug in both mobile and desktop safari, versions higher than 9. This testcase demonstrates the bug. If svg a linked as an external svg sprite sheet, they are downloaded by the browser everytime one icon is used in a webpage.</p>
+		<h2>Code example:</h2>
+		<h3>The svg sprite sheet</h3>
+		<pre><code>
+			&lt;symbol viewBox="0 0 9 20" id="svg-arrow-gallery-right"&gt;
+				&lt;title&gt;Ein Bild vor&lt;/title&gt;
+				&lt;path d="M0 18.92l5.326-9.253L.056.977 2.29 0 9 9.82 2.236 20 0 18.92z" /&gt;
+			&lt;/symbol&gt;
+		</code></pre>
+		<h3>Icons used in webpage</h3>
+		<pre><code>
+			&lt;svg class="svg-symbol" role="img"&gt;
+				&lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="icons_smybols.svg#svg-arrow-gallery-right"&gt;&lt;/use&gt;
+			&lt;/svg&gt;
+		</code></pre>
+		<h2>Steps to reproduce</h2>
+		<p>To reproduce the bug, reload this page with developer tools network panel open and caching off in a mobile Safari (iOS 9.3) or an desktop Safari (Version 9.1.1). You'll see the file <code>icons.svg</code> is downloaded five times. Using the same procedure in Chrome or Firefox shows the file is downloaded only once there, which would be the expected behaviour.</p> 
+</body>
+</html>
