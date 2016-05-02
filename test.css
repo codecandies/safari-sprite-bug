@@ -1,0 +1,17 @@
+body {
+	font-family: sans-serif;
+}
+
+.wrapper {
+	margin: 10% auto;
+	width: 65vw;
+}
+
+.svg-symbol {
+	color: #000;
+	display: inline-block;
+	fill: currentColor;
+	height: auto;
+	padding: 20px;
+	width: 50px;
+}
